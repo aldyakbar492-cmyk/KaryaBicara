@@ -1,0 +1,43 @@
+ 
+       /* Palet Warna Lembut Rendah Stimulasi Sensorik */
+        body {
+            background-color: #FAF8F5;
+            color: #1E293B;
+            transition: background-color 0.2s ease, color 0.2s ease;
+        }
+
+        /* Mode Ramah Disleksia (Spasi huruf & baris lebih lega + Font Hyperlegible) */
+        body.mode-dyslexic {
+            font-family: 'Atkinson Hyperlegible', sans-serif !important;
+            letter-spacing: 0.06em !important;
+            word-spacing: 0.14em !important;
+            line-height: 1.85 !important;
+        }
+        body.mode-dyslexic p,
+        body.mode-dyslexic span,
+        body.mode-dyslexic button,
+        body.mode-dyslexic input,
+        body.mode-dyslexic textarea {
+            letter-spacing: 0.05em;
+            line-height: 1.8;
+        }
+
+        /* Mode Teks Besar (Untuk Low Vision / Kemudahan Baca) */
+        html.mode-large-text {
+            font-size: 118%;
+        }
+
+        /* Mode Tenang / Tanpa Animasi (Untuk Sensitivitas Vestibular & Autisme) */
+        body.mode-calm *,
+        body.mode-calm *::before,
+        body.mode-calm *::after {
+            animation: none !important;
+            transition: none !important;
+            transform: none !important;
+        }
+
+        /* Focus Ring Jelas untuk Navigasi Keyboard & Aksesibilitas */
+        :focus-visible {
+            outline: 3px solid #D97706;
+            outline-offset: 2px;
+        }
